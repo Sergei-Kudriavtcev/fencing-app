@@ -1,3 +1,41 @@
 html {
-    background-color: black;
+    margin-left: 10px;
 }
+/*Heading*/
+#heading {
+    text-align: center;
+    padding: 20px 20px;
+    border-bottom: 3px solid black;
+    background-color: lightgray;
+    font-weight: bold;
+    color: black;
+}
+/*Menue Icon*/
+.fas:hover {
+    cursor: pointer;
+
+}
+/*Hotbar*/
+#hotbar h4 {
+    color: black;
+    text-align: center;
+    padding: 20px 0px;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray ;
+     border-left: 2px solid gray; 
+}
+/*Tabs*/
+#tabs .col-md-3 {
+    padding: 10px 0px;
+    border-top: 2px solid gray;
+    border-right: 2px solid gray;
+}
+.col-md-3:hover {
+    background-color: rgba(116, 116, 116, 0.212);
+    transition: 0.5s;
+}
+/*RANDOM IMAGE FOR CONTENT*/
+img {
+    height:600px ;
+}
+
