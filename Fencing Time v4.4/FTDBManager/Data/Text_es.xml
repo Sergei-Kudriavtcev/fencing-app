@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Fencing Time, LLC and Daniel Berke 
+-->
+<LocalizedText xmlns="http://www.fencingtime.com" version="4.4">
+  <!-- General text -->
+  <LocText id="LiveResults">Resultados en directo</LocText>
+  <LocText id="LRGenerated">Resultados en directo generados por</LocText>
+  <LocText id="GeneratedBy">Resultados generados por</LocText>
+  <LocText id="TournSW">Software de torneos</LocText>
+
+  <!-- Index page -->
+  <LocText id="LastUpdated">Posado actualización</LocText>
+  <LocText id="EventSchedule">Programa de actos</LocText>
+  <LocText id="Time">Hora</LocText>
+  <LocText id="Event">Evento</LocText>
+  <LocText id="Details">Detalles</LocText>
+  <LocText id="View">Ver</LocText>
+  <LocText id="Medals">Medallas</LocText>
+  <LocText id="Gold">Medallas de oro</LocText>
+  <LocText id="Silver">Medallas de plata</LocText>
+  <LocText id="Bronze">Medallas de bronce</LocText>
+  <LocText id="Total">Medallas totales</LocText>
+  <LocText id="MedalCounts">Medallas totales</LocText>
+
+  <!-- Event page -->
+  <LocText id="EventFormat">Formato del evento</LocText>
+  <LocText id="ReturnToSched">Vuelva a programar</LocText>
+  <LocText id="PrelimSeeding">Clasificación preliminar</LocText>
+  <LocText id="CheckInStatus">Estado registrado</LocText>
+  <LocText id="CompCheckInStatus">Estado registrado tirador</LocText>
+  <LocText id="EventFencers">Los esgrimistas</LocText>
+  <LocText id="ResultsSoFar">Resultados hasta ahora</LocText>
+  <LocText id="FinalResults">Los resultados finales</LocText>
+  <LocText id="FinishTime">Evento terminó a las</LocText>
+  <LocText id="Seeding">Clasificación</LocText>
+  <LocText id="StripsByName">Asignaciones de pistas por nombre</LocText>
+  <LocText id="StripsByClub">Asignaciones de pistas de clubes</LocText>
+  <LocText id="Pools">Poules</LocText>
+  <LocText id="Tableau">Tabla</LocText>
+  <LocText id="Scores">Resultados</LocText>
+  <LocText id="RoundSeeding">Clasificación</LocText>
+  <LocText id="RoundScores">Resultados</LocText>
+  <LocText id="NumFencers">El recuento total de los tiradores:</LocText>
+  <LocText id="NumTeams">El recuento total de equipos:</LocText>
+  <LocText id="RoundNum">Vuelta #</LocText>
+  
+  <!-- General column headers -->
+  <LocText id="Status">Estado</LocText>
+  <LocText id="Name">Nombre</LocText>
+  <LocText id="Club">Club</LocText>
+  <LocText id="Clubs">Club(s)</LocText>
+  <LocText id="Division">Región</LocText>
+  <LocText id="Country">País</LocText>
+  <LocText id="Seed">Clasificación</LocText>
+  <LocText id="Points">Puntos</LocText>
+  <LocText id="Class">Clas.</LocText>
+  <LocText id="Rank">Rango</LocText>
+  <LocText id="ClassRank">Clas./Rango</LocText>
+  <LocText id="MemNum">Miembro #</LocText>
+  <LocText id="Members">Miembros</LocText>
+  <LocText id="Place">Puesto</LocText>
+  <LocText id="Earned">Ganado</LocText>
+  <LocText id="QualFor">Calificado para</LocText>
+  <LocText id="FencerName">Nombre del esgrimista</LocText>
+  <LocText id="TeamName">Nombre del equipo</LocText>
+  <LocText id="Birthdate">Fecha de nacimiento</LocText>
+  <LocText id="Gender">Género</LocText>
+  <LocText id="TeamRank">Rango del equipo</LocText>
+  <LocText id="FencerRank">Rango esgrimista</LocText>
+  <LocText id="Male">Masculino</LocText>
+  <LocText id="Female">Femenino</LocText>
+
+  <!-- Temporary pool results -->
+  <LocText id="TemporaryPoolResults">Los resultados provisionales de poules</LocText>
+  <LocText id="CertainPromotion">Cierto avance</LocText>
+  <LocText id="LikelyPromotion">Probable avance</LocText>
+  <LocText id="PossiblePromotion">Posible avance</LocText>
+  <LocText id="PossibleElimination">Eliminación posible</LocText>
+  <LocText id="LikelyElimination">Eliminación probable</LocText>
+  
+  <!-- Misc text -->
+  <LocText id="Of">de</LocText>
+  <LocText id="CompsCheckedIn">tiradores presentes.</LocText>
+  <LocText id="FencerExcluded">Tirador Excluidos</LocText>
+  <LocText id="FencerScratched">Tirador Rayado</LocText>
+  <LocText id="TeamExcluded">Equipo Excluidos</LocText>
+  <LocText id="TeamScratched">Equipo Rayado</LocText>
+  <LocText id="Exempt">Exentos de esta ronda</LocText>
+  <LocText id="Withdrew">Se retiro</LocText>
+  <LocText id="Excluded">Excluidos</LocText>
+  <LocText id="FailedToAppear">No se presentó</LocText>
+  <LocText id="Eliminated">eliminado</LocText>
+  <LocText id="Advanced">avanzado</LocText>
+  <LocText id="PoolNum">Poule #</LocText>
+  <LocText id="Strip">Pista</LocText>
+  <LocText id="Score">Partitura</LocText>
+  <LocText id="Referees">árbitro(s):</LocText>
+  <LocText id="TS">TD</LocText>
+  <LocText id="TR">TR</LocText>
+  
+  <!-- DE tableau -->
+  <LocText id="ViewFrom">Ver tabla de</LocText>
+  <LocText id="TableOf">tabla de</LocText>
+  <LocText id="OnStrip">En pista</LocText>
+  <LocText id="At">a las</LocText>
+  <LocText id="Ref">árb</LocText>
+  <LocText id="Video">video</LocText>
+  <LocText id="Assist">asist</LocText>
+  <LocText id="MatchDetails">Detalles del partido</LocText>
+  <LocText id="LiveScores">Puntos en directo</LocText>
+</LocalizedText>

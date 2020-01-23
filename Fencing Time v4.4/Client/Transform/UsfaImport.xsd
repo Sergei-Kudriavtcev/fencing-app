@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:usfa="https://member.usafencing.org/" xmlns="https://member.usafencing.org/" targetNamespace="https://member.usafencing.org/" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>4.4</xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="FencingData">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="ClubDatabase"    type="usfa:ClubDatabaseType"   minOccurs="1" maxOccurs="1" />
+        <xs:element name="PersonDatabase"  type="usfa:PersonDatabaseType" minOccurs="1" maxOccurs="1" /> 
+        <xs:element name="Tournament"      type="TournamentType"          minOccurs="1" maxOccurs="1" />
+        <xs:element name="RegNoteDatabase" type="RegNoteDatabaseType"     minOccurs="0" maxOccurs="1" /> 
+      </xs:all>
+      
+      <xs:attribute name="version" type="xs:string" fixed="1.0" />
+    </xs:complexType>
+
+    <xs:unique name="clubKey">
+      <xs:selector xpath="usfa:ClubDatabase/usfa:Club" />
+      <xs:field    xpath="@USFAMemberNum" />
+    </xs:unique>
+    <xs:unique name="personKey">
+      <xs:selector xpath="usfa:PersonDatabase/usfa:Person" />
+      <xs:field    xpath="@PersonID"   />
+    </xs:unique>
+    
+    <xs:keyref name="personClubKeyConstraint1" refer="usfa:clubKey">
+      <xs:selector xpath="usfa:PersonDatabase/usfa:Person" />
+      <xs:field    xpath="@Club1" />
+    </xs:keyref>        
+    <xs:keyref name="personClubKeyConstraint2" refer="usfa:clubKey">
+      <xs:selector xpath="usfa:PersonDatabase/usfa:Person" />
+      <xs:field    xpath="@Club2" />
+    </xs:keyref>        
+    <xs:keyref name="regPersonKeyConstraint" refer="usfa:personKey">
+      <xs:selector xpath="usfa:Tournament/usfa:Events/usfa:Event/usfa:Reg" />
+      <xs:field    xpath="@PersonID" />
+    </xs:keyref>        
+    <xs:keyref name="teamFencerPersonKeyConstraint" refer="usfa:personKey">
+      <xs:selector xpath="usfa:Tournament/usfa:Events/usfa:Event/usfa:TeamReg/usfa:TeamFencer" />
+      <xs:field    xpath="@PersonID" />
+    </xs:keyref>        
+    <xs:keyref name="refereePersonKeyConstraint" refer="usfa:personKey">
+      <xs:selector xpath="usfa:Tournament/usfa:Referees/usfa:Referee" />
+      <xs:field    xpath="@PersonID" />
+    </xs:keyref>        
+    <xs:keyref name="regNotePersonKeyConstraint" refer="usfa:personKey">
+      <xs:selector xpath="usfa:RegNoteDatabase/usfa:Note" />
+      <xs:field    xpath="@PersonID" />
+    </xs:keyref>        
+  </xs:element>
+
+  <xs:complexType name="ClubDatabaseType">
+    <xs:sequence>
+      <xs:element name="Club" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="USFAMemberNum" type="usfa:MemberNumType"    use="required" />
+          <xs:attribute name="Name"          type="usfa:NonEmptyString"   use="required" />
+          <xs:attribute name="Abbreviation"  type="usfa:NonEmptyString"   use="optional" />
+          <xs:attribute name="Location"      type="xs:string"             use="optional" />
+          <xs:attribute name="Division"      type="usfa:DivisionType"     use="optional" />
+          <xs:attribute name="Country"       type="usfa:CountryType"      use="optional" />
+          <xs:attribute name="Expires"       type="usfa:DateType"         use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="PersonDatabaseType">
+    <xs:sequence>
+      <xs:element name="Person" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <!-- Memberships -->
+          <xs:all>
+            <xs:element name="Memberships" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Membership" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="usfa:MemberNumType">
+                          <xs:attribute name="Org"                           type="usfa:NonEmptyString" use="required" />
+                          <xs:attribute name="Expires"                       type="usfa:DateType"       use="required" />
+                          <xs:attribute name="IsCompetitive"                 type="usfa:BoolType"       use="required" />
+                          <xs:attribute name="SafeSportExpirationDate"       type="usfa:DateType"       use="optional" />
+                          <xs:attribute name="BackgroundCheckExpirationDate" type="usfa:DateType"       use="optional" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            
+            <!-- Weapon classifications -->
+            <xs:element name="WeaponClassifications" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Classification" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="usfa:ClassificationType">
+                          <xs:attribute name="Org"    type="usfa:NonEmptyString" use="required" />
+                          <xs:attribute name="Weapon" type="usfa:WeaponType"     use="required" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            
+            <!-- Referee ratings -->
+            <xs:element name="RefereeRatings" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Rating" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="usfa:RefRatingType">
+                          <xs:attribute name="Org"    type="usfa:NonEmptyString" use="required" />
+                          <xs:attribute name="Weapon" type="usfa:WeaponType"     use="required" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+
+            <!-- Weapon rankings -->
+            <xs:element name="WeaponRankings" minOccurs="0" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Ranking" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:unsignedInt">
+                          <xs:attribute name="Org"    type="usfa:NonEmptyString" use="required" />
+                          <xs:attribute name="Weapon" type="usfa:WeaponType"     use="required" />
+                          <xs:attribute name="List"   type="PointListType"       use="required" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:all>
+        
+          <xs:attribute name="PersonID"            type="usfa:MemberNumType"    use="required" />
+          <xs:attribute name="FirstName"           type="usfa:NonEmptyString"   use="required" />
+          <xs:attribute name="LastName"            type="usfa:NonEmptyString"   use="required" />
+          <xs:attribute name="MiddleName"          type="usfa:NonEmptyString"   use="optional" />
+          <xs:attribute name="NickName"            type="usfa:NonEmptyString"   use="optional" />
+          <xs:attribute name="Suffix"              type="usfa:NonEmptyString"   use="optional" />
+          <xs:attribute name="Gender"              type="usfa:PersonGenderType" use="required" />
+          <xs:attribute name="BirthYear"           type="usfa:YearType"         use="required" />
+          <xs:attribute name="BirthdateVerified"   type="usfa:BoolType"         use="required" />
+          <xs:attribute name="Handedness"          type="usfa:HandType"         use="optional" />
+          <xs:attribute name="Division"            type="usfa:DivisionType"     use="optional" />
+          <xs:attribute name="Country"             type="usfa:CountryType"      use="optional" />
+          <xs:attribute name="CitizenshipVerified" type="usfa:BoolType"         use="required" />
+          <xs:attribute name="RegionID"            type="usfa:RegionType"       use="optional" />
+          <xs:attribute name="ProfilePicture"      type="usfa:NonEmptyString"   use="optional" />
+          <xs:attribute name="RegistrationFeePaid" type="xs:decimal"            use="optional" />
+          <xs:attribute name="Club1"               type="usfa:MemberNumType"    use="optional" />
+          <xs:attribute name="Club2"               type="usfa:MemberNumType"    use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TournamentType">
+    <xs:sequence>
+      <xs:element name="Events" minOccurs="1" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Event" type="usfa:EventType" minOccurs="0" maxOccurs="unbounded">
+                <xs:unique name="regPerson">
+                  <xs:selector xpath="usfa:Reg" />
+                  <xs:field    xpath="@PersonID"   />
+                </xs:unique>
+                <xs:unique name="teamRegPerson">
+                  <xs:selector xpath="usfa:TeamReg/usfa:TeamFencer" />
+                  <xs:field    xpath="@PersonID"   />
+                </xs:unique>
+            </xs:element>            
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="Referees" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Referee" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="PersonID" type="usfa:MemberNumType"  use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  
+    <xs:attribute name="TournamentID"  type="xs:unsignedLong"    use="required" />
+    <xs:attribute name="Name"          type="NonEmptyString"     use="required" />
+    <xs:attribute name="Location"      type="NonEmptyString"     use="optional" />
+    <xs:attribute name="StartDate"     type="usfa:DateType"      use="required" />
+    <xs:attribute name="EndDate"       type="usfa:DateType"      use="required" />
+    <xs:attribute name="City"          type="NonEmptyString"     use="optional" />
+    <xs:attribute name="State"         type="StateType"          use="optional" />
+    <xs:attribute name="Zip"           type="NonEmptyString"     use="optional" />
+  </xs:complexType>
+  
+  <xs:complexType name="EventType">
+    <xs:choice>
+      <xs:element name="Reg" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="PersonID"     type="usfa:MemberNumType"  use="required" />
+          <xs:attribute name="EventFeePaid" type="xs:decimal"          use="optional" />
+        </xs:complexType>
+      </xs:element>
+
+      <xs:element name="TeamReg" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="TeamFencer" minOccurs="0" maxOccurs="4">
+              <xs:complexType>
+                <xs:attribute name="PersonID" type="usfa:MemberNumType" use="required" />
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+
+          <xs:attribute name="TeamID"       type="xs:unsignedLong"    use="required" />
+          <xs:attribute name="TeamName"     type="NonEmptyString"     use="required" />
+          <xs:attribute name="TeamCaptain"  type="NonEmptyString"     use="optional" />
+          <xs:attribute name="TeamClub"     type="usfa:MemberNumType" use="optional" />
+          <xs:attribute name="TeamDivision" type="usfa:DivisionType"  use="optional" />
+          <xs:attribute name="TeamCountry"  type="usfa:CountryType"   use="optional" />
+          <xs:attribute name="EventFeePaid" type="xs:decimal"         use="optional" />
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+
+    <xs:attribute name="EventID"         type="xs:unsignedLong"      use="required" />
+    <xs:attribute name="EventDateTime"   type="usfa:DateTimeType"    use="required" />
+    <xs:attribute name="Weapon"          type="usfa:WeaponType"      use="required" />
+    <xs:attribute name="Gender"          type="usfa:EventGenderType" use="required" />
+    <xs:attribute name="AgeLimit"        type="usfa:AgeLimitType"    use="required" />
+    <xs:attribute name="RegionID"        type="usfa:RegionType"      use="required" />
+    <xs:attribute name="IsTeam"          type="usfa:BoolType"        use="required" />
+    <xs:attribute name="IsWheelchair"    type="usfa:BoolType"        use="required" />
+    <xs:attribute name="RatingLimit"     type="usfa:RatingLimitType" use="required" />
+    <xs:attribute name="EventScope"      type="usfa:EventScopeType"  use="required" />
+    <xs:attribute name="EventFee"        type="xs:decimal"           use="optional" />
+    <xs:attribute name="RegistrationFee" type="xs:decimal"           use="optional" />
+  </xs:complexType>
+   
+  <xs:complexType name="RegNoteDatabaseType">
+    <xs:sequence>
+      <xs:element name="Note" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="PersonID" type="usfa:MemberNumType"  use="required" />
+          <xs:attribute name="Note"     type="usfa:NonEmptyString" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  
+  <!-- Simple type definitions -->
+  <xs:simpleType name="NonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="DateType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="DateTimeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-5][0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="BoolType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="True"  />
+      <xs:enumeration value="False" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="MemberNumType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="YearType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[1-2][0-9][0-9][0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="ClassificationType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="U"               />
+      <xs:pattern value="[A-E][0-9][0-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="RefRatingType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="P"     />
+      <xs:pattern value="10"    />
+      <xs:pattern value="[1-9]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PersonGenderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="M" />
+      <xs:enumeration value="F" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventGenderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Men"   />
+      <xs:enumeration value="Women" />
+      <xs:enumeration value="Mixed" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="HandType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="L" />
+      <xs:enumeration value="R" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="RegionType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="WeaponType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Foil"  />
+      <xs:enumeration value="Epee"  />
+      <xs:enumeration value="Saber" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PointListType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FIE" />
+      <xs:enumeration value="SR"  />
+      <xs:enumeration value="VET" />
+      <xs:enumeration value="V40" />
+      <xs:enumeration value="V50" />
+      <xs:enumeration value="V60" />
+      <xs:enumeration value="V70" />
+      <xs:enumeration value="V80" />
+      <xs:enumeration value="JNR" />
+      <xs:enumeration value="CDT" />
+      <xs:enumeration value="Y14" />
+      <xs:enumeration value="Y12" />
+      <xs:enumeration value="Y10" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="AgeLimitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Senior"      />
+      <xs:enumeration value="Junior"      />
+      <xs:enumeration value="Cadet"       />
+      <xs:enumeration value="U19"         />
+      <xs:enumeration value="U16"         />
+      <xs:enumeration value="Y14"         />
+      <xs:enumeration value="Y12"         />
+      <xs:enumeration value="Y10"         />
+      <xs:enumeration value="Y8"          />
+      <xs:enumeration value="VetCombined" />
+      <xs:enumeration value="Vet40"       />
+      <xs:enumeration value="Vet50"       />
+      <xs:enumeration value="Vet60"       />
+      <xs:enumeration value="Vet70"       />
+      <xs:enumeration value="Vet80"       />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="RatingLimitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Open"      />
+      <xs:enumeration value="Unrated"   />
+      <xs:enumeration value="EAndUnder" />
+      <xs:enumeration value="DivIII"    />
+      <xs:enumeration value="DivII"     />
+      <xs:enumeration value="DivI"      />
+      <xs:enumeration value="DivIA"     />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EventScopeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RYC"     />
+      <xs:enumeration value="SYC"     />
+      <xs:enumeration value="ROC"     />
+      <xs:enumeration value="RJC"     />
+      <xs:enumeration value="RCC"     />
+      <xs:enumeration value="SCC"     />
+      <xs:enumeration value="SJC"     />
+      <xs:enumeration value="IRC"     />
+      <xs:enumeration value="NAC"     />
+      <xs:enumeration value="CHAMP"   />
+      <xs:enumeration value="DIVQUAL" />
+      <xs:enumeration value="LOCAL"   />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="DivisionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="US Fencing"              />
+      <xs:enumeration value="Alabama"                 />
+      <xs:enumeration value="Alaska"                  />
+      <xs:enumeration value="Arizona"                 />
+      <xs:enumeration value="Ark-La-Miss"             />
+      <xs:enumeration value="Border Texas"            />
+      <xs:enumeration value="Capitol"                 />
+      <xs:enumeration value="Central California"      />
+      <xs:enumeration value="Central Florida"         />
+      <xs:enumeration value="Central Pennsylvania"    />
+      <xs:enumeration value="Colorado"                />
+      <xs:enumeration value="Columbus"                />
+      <xs:enumeration value="Connecticut"             />
+      <xs:enumeration value="Gateway Florida"         />
+      <xs:enumeration value="Georgia"                 />
+      <xs:enumeration value="Gold Coast Florida"      />
+      <xs:enumeration value="Green Mountain"          />
+      <xs:enumeration value="Gulf Coast"              />
+      <xs:enumeration value="Harrisburg"              />
+      <xs:enumeration value="Hawaii"                  />
+      <xs:enumeration value="Hudson-Berkshire"        />
+      <xs:enumeration value="Illinois"                />
+      <xs:enumeration value="Indiana"                 />
+      <xs:enumeration value="Inland Empire"           />
+      <xs:enumeration value="Iowa"                    />
+      <xs:enumeration value="Kansas"                  />
+      <xs:enumeration value="Kentucky"                />
+      <xs:enumeration value="Long Island"             />
+      <xs:enumeration value="Louisiana"               />
+      <xs:enumeration value="Maryland"                />
+      <xs:enumeration value="Metropolitan NYC"        />
+      <xs:enumeration value="Michigan"                />
+      <xs:enumeration value="Minnesota"               />
+      <xs:enumeration value="Mountain Valley"         />
+      <xs:enumeration value="National"                />
+      <xs:enumeration value="Nebraska-South Dakota"   />
+      <xs:enumeration value="Nevada"                  />
+      <xs:enumeration value="New England"             />
+      <xs:enumeration value="New Jersey"              />
+      <xs:enumeration value="New Mexico"              />
+      <xs:enumeration value="North Carolina"          />
+      <xs:enumeration value="North Coast"             />
+      <xs:enumeration value="North Texas"             />
+      <xs:enumeration value="Northeast"               />
+      <xs:enumeration value="Northeast Pennsylvania"  />
+      <xs:enumeration value="Northern California"     />
+      <xs:enumeration value="Northern Ohio"           />
+      <xs:enumeration value="Oklahoma"                />
+      <xs:enumeration value="Orange Coast"            />
+      <xs:enumeration value="Oregon"                  />
+      <xs:enumeration value="Philadelphia"            />
+      <xs:enumeration value="Plains Texas"            />
+      <xs:enumeration value="San Bernardino"          />
+      <xs:enumeration value="San Diego"               />
+      <xs:enumeration value="South Carolina"          />
+      <xs:enumeration value="South Jersey"            />
+      <xs:enumeration value="South Texas"             />
+      <xs:enumeration value="Southern California"     />
+      <xs:enumeration value="Southwest Ohio"          />
+      <xs:enumeration value="St. Louis"               />
+      <xs:enumeration value="Tennessee"               />
+      <xs:enumeration value="Utah-Southern Idaho"     />
+      <xs:enumeration value="Virginia"                />
+      <xs:enumeration value="Westchester-Rockland"    />
+      <xs:enumeration value="Western New York"        />
+      <xs:enumeration value="Western Pennsylvania"    />
+      <xs:enumeration value="Western Washington"      />
+      <xs:enumeration value="Wisconsin"               />
+      <xs:enumeration value="Wyoming"                 />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CountryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AFG" />
+      <xs:enumeration value="ALA" />
+      <xs:enumeration value="ALB" />
+      <xs:enumeration value="ALG" />
+      <xs:enumeration value="ASA" />
+      <xs:enumeration value="AND" />
+      <xs:enumeration value="ANG" />
+      <xs:enumeration value="AIA" />
+      <xs:enumeration value="ATA" />
+      <xs:enumeration value="ANT" />
+      <xs:enumeration value="ARG" />
+      <xs:enumeration value="ARM" />
+      <xs:enumeration value="ARU" />
+      <xs:enumeration value="AUS" />
+      <xs:enumeration value="AUT" />
+      <xs:enumeration value="AZE" />
+      <xs:enumeration value="BAH" />
+      <xs:enumeration value="BRN" />
+      <xs:enumeration value="BAN" />
+      <xs:enumeration value="BAR" />
+      <xs:enumeration value="BLR" />
+      <xs:enumeration value="BEL" />
+      <xs:enumeration value="BIZ" />
+      <xs:enumeration value="BEN" />
+      <xs:enumeration value="BER" />
+      <xs:enumeration value="BHU" />
+      <xs:enumeration value="BOL" />
+      <xs:enumeration value="BIH" />
+      <xs:enumeration value="BOT" />
+      <xs:enumeration value="BVT" />
+      <xs:enumeration value="BRA" />
+      <xs:enumeration value="IOT" />
+      <xs:enumeration value="IVB" />
+      <xs:enumeration value="BRU" />
+      <xs:enumeration value="BUL" />
+      <xs:enumeration value="BUR" />
+      <xs:enumeration value="BDI" />
+      <xs:enumeration value="CAM" />
+      <xs:enumeration value="CMR" />
+      <xs:enumeration value="CAN" />
+      <xs:enumeration value="CPV" />
+      <xs:enumeration value="CAY" />
+      <xs:enumeration value="CAF" />
+      <xs:enumeration value="CHA" />
+      <xs:enumeration value="CHI" />
+      <xs:enumeration value="CHN" />
+      <xs:enumeration value="CXR" />
+      <xs:enumeration value="CCK" />
+      <xs:enumeration value="COL" />
+      <xs:enumeration value="COM" />
+      <xs:enumeration value="CGO" />
+      <xs:enumeration value="COK" />
+      <xs:enumeration value="CRC" />
+      <xs:enumeration value="CIV" />
+      <xs:enumeration value="CRO" />
+      <xs:enumeration value="CUB" />
+      <xs:enumeration value="CYP" />
+      <xs:enumeration value="CZE" />
+      <xs:enumeration value="DEN" />
+      <xs:enumeration value="DJI" />
+      <xs:enumeration value="DMA" />
+      <xs:enumeration value="DOM" />
+      <xs:enumeration value="COD" />
+      <xs:enumeration value="ECU" />
+      <xs:enumeration value="EGY" />
+      <xs:enumeration value="ESA" />
+      <xs:enumeration value="GEQ" />
+      <xs:enumeration value="ERI" />
+      <xs:enumeration value="EST" />
+      <xs:enumeration value="ETH" />
+      <xs:enumeration value="FLK" />
+      <xs:enumeration value="FRO" />
+      <xs:enumeration value="FIJ" />
+      <xs:enumeration value="FIN" />
+      <xs:enumeration value="FIE" />
+      <xs:enumeration value="FRA" />
+      <xs:enumeration value="GUF" />
+      <xs:enumeration value="PYF" />
+      <xs:enumeration value="ATF" />
+      <xs:enumeration value="GAB" />
+      <xs:enumeration value="GAM" />
+      <xs:enumeration value="GEO" />
+      <xs:enumeration value="GER" />
+      <xs:enumeration value="GHA" />
+      <xs:enumeration value="GIB" />
+      <xs:enumeration value="GBR" />
+      <xs:enumeration value="GRE" />
+      <xs:enumeration value="GRL" />
+      <xs:enumeration value="GRN" />
+      <xs:enumeration value="GLP" />
+      <xs:enumeration value="GUM" />
+      <xs:enumeration value="GUA" />
+      <xs:enumeration value="GGY" />
+      <xs:enumeration value="GUI" />
+      <xs:enumeration value="GBS" />
+      <xs:enumeration value="GUY" />
+      <xs:enumeration value="HAI" />
+      <xs:enumeration value="HMD" />
+      <xs:enumeration value="HON" />
+      <xs:enumeration value="HKG" />
+      <xs:enumeration value="HUN" />
+      <xs:enumeration value="ISL" />
+      <xs:enumeration value="IND" />
+      <xs:enumeration value="INA" />
+      <xs:enumeration value="IRI" />
+      <xs:enumeration value="IRQ" />
+      <xs:enumeration value="IRL" />
+      <xs:enumeration value="IMN" />
+      <xs:enumeration value="ISR" />
+      <xs:enumeration value="ITA" />
+      <xs:enumeration value="JAM" />
+      <xs:enumeration value="JPN" />
+      <xs:enumeration value="JEY" />
+      <xs:enumeration value="JOR" />
+      <xs:enumeration value="KAZ" />
+      <xs:enumeration value="KEN" />
+      <xs:enumeration value="KIR" />
+      <xs:enumeration value="KUW" />
+      <xs:enumeration value="KGZ" />
+      <xs:enumeration value="LAO" />
+      <xs:enumeration value="LAT" />
+      <xs:enumeration value="LBN" />
+      <xs:enumeration value="LES" />
+      <xs:enumeration value="LBR" />
+      <xs:enumeration value="LBA" />
+      <xs:enumeration value="LIE" />
+      <xs:enumeration value="LTU" />
+      <xs:enumeration value="LUX" />
+      <xs:enumeration value="MAC" />
+      <xs:enumeration value="MKD" />
+      <xs:enumeration value="MAD" />
+      <xs:enumeration value="MAW" />
+      <xs:enumeration value="MAS" />
+      <xs:enumeration value="MDV" />
+      <xs:enumeration value="MLI" />
+      <xs:enumeration value="MLT" />
+      <xs:enumeration value="MHL" />
+      <xs:enumeration value="MTQ" />
+      <xs:enumeration value="MTN" />
+      <xs:enumeration value="MRI" />
+      <xs:enumeration value="MYT" />
+      <xs:enumeration value="MEX" />
+      <xs:enumeration value="FSM" />
+      <xs:enumeration value="MDA" />
+      <xs:enumeration value="MON" />
+      <xs:enumeration value="MGL" />
+      <xs:enumeration value="MNE" />
+      <xs:enumeration value="MSR" />
+      <xs:enumeration value="MAR" />
+      <xs:enumeration value="MOZ" />
+      <xs:enumeration value="MYA" />
+      <xs:enumeration value="NAM" />
+      <xs:enumeration value="NRU" />
+      <xs:enumeration value="NEP" />
+      <xs:enumeration value="NED" />
+      <xs:enumeration value="AHO" />
+      <xs:enumeration value="NCL" />
+      <xs:enumeration value="NZL" />
+      <xs:enumeration value="NCA" />
+      <xs:enumeration value="NIG" />
+      <xs:enumeration value="NGR" />
+      <xs:enumeration value="NIU" />
+      <xs:enumeration value="NFK" />
+      <xs:enumeration value="PRK" />
+      <xs:enumeration value="MNP" />
+      <xs:enumeration value="NOR" />
+      <xs:enumeration value="OMA" />
+      <xs:enumeration value="PAK" />
+      <xs:enumeration value="PLW" />
+      <xs:enumeration value="PLE" />
+      <xs:enumeration value="PAN" />
+      <xs:enumeration value="PNG" />
+      <xs:enumeration value="PAR" />
+      <xs:enumeration value="PER" />
+      <xs:enumeration value="PHI" />
+      <xs:enumeration value="PCN" />
+      <xs:enumeration value="POL" />
+      <xs:enumeration value="POR" />
+      <xs:enumeration value="PUR" />
+      <xs:enumeration value="QAT" />
+      <xs:enumeration value="REU" />
+      <xs:enumeration value="ROU" />
+      <xs:enumeration value="RUS" />
+      <xs:enumeration value="RWA" />
+      <xs:enumeration value="BLM" />
+      <xs:enumeration value="SHN" />
+      <xs:enumeration value="MAF" />
+      <xs:enumeration value="SPM" />
+      <xs:enumeration value="SAM" />
+      <xs:enumeration value="SMR" />
+      <xs:enumeration value="STP" />
+      <xs:enumeration value="KSA" />
+      <xs:enumeration value="SEN" />
+      <xs:enumeration value="SRB" />
+      <xs:enumeration value="SEY" />
+      <xs:enumeration value="SLE" />
+      <xs:enumeration value="SGP" />
+      <xs:enumeration value="SVK" />
+      <xs:enumeration value="SLO" />
+      <xs:enumeration value="SOL" />
+      <xs:enumeration value="SOM" />
+      <xs:enumeration value="RSA" />
+      <xs:enumeration value="SGS" />
+      <xs:enumeration value="KOR" />
+      <xs:enumeration value="SSD" />
+      <xs:enumeration value="ESP" />
+      <xs:enumeration value="SRI" />
+      <xs:enumeration value="SKN" />
+      <xs:enumeration value="LCA" />
+      <xs:enumeration value="VIN" />
+      <xs:enumeration value="SUD" />
+      <xs:enumeration value="SUR" />
+      <xs:enumeration value="SJM" />
+      <xs:enumeration value="SWZ" />
+      <xs:enumeration value="SWE" />
+      <xs:enumeration value="SUI" />
+      <xs:enumeration value="SYR" />
+      <xs:enumeration value="TPE" />
+      <xs:enumeration value="TJK" />
+      <xs:enumeration value="TAN" />
+      <xs:enumeration value="THA" />
+      <xs:enumeration value="TLS" />
+      <xs:enumeration value="TOG" />
+      <xs:enumeration value="TKL" />
+      <xs:enumeration value="TGA" />
+      <xs:enumeration value="TRI" />
+      <xs:enumeration value="TUN" />
+      <xs:enumeration value="TUR" />
+      <xs:enumeration value="TKM" />
+      <xs:enumeration value="TCA" />
+      <xs:enumeration value="TUV" />
+      <xs:enumeration value="UGA" />
+      <xs:enumeration value="UKR" />
+      <xs:enumeration value="UAE" />
+      <xs:enumeration value="UMI" />
+      <xs:enumeration value="USA" />
+      <xs:enumeration value="URU" />
+      <xs:enumeration value="UZB" />
+      <xs:enumeration value="VAN" />
+      <xs:enumeration value="VAT" />
+      <xs:enumeration value="VEN" />
+      <xs:enumeration value="VIE" />
+      <xs:enumeration value="ISV" />
+      <xs:enumeration value="WLF" />
+      <xs:enumeration value="ESH" />
+      <xs:enumeration value="YEM" />
+      <xs:enumeration value="ZAM" />
+      <xs:enumeration value="ZIM" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="StateType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AK" />
+      <xs:enumeration value="AL" />
+      <xs:enumeration value="AR" />
+      <xs:enumeration value="AZ" />
+      <xs:enumeration value="CA" />
+      <xs:enumeration value="CO" />
+      <xs:enumeration value="CT" />
+      <xs:enumeration value="DC" />
+      <xs:enumeration value="DE" />
+      <xs:enumeration value="FL" />
+      <xs:enumeration value="GA" />
+      <xs:enumeration value="HI" />
+      <xs:enumeration value="IA" />
+      <xs:enumeration value="ID" />
+      <xs:enumeration value="IL" />
+      <xs:enumeration value="IN" />
+      <xs:enumeration value="KS" />
+      <xs:enumeration value="KY" />
+      <xs:enumeration value="LA" />
+      <xs:enumeration value="MA" />
+      <xs:enumeration value="MD" />
+      <xs:enumeration value="ME" />
+      <xs:enumeration value="MI" />
+      <xs:enumeration value="MN" />
+      <xs:enumeration value="MO" />
+      <xs:enumeration value="MS" />
+      <xs:enumeration value="MT" />
+      <xs:enumeration value="NC" />
+      <xs:enumeration value="ND" />
+      <xs:enumeration value="NE" />
+      <xs:enumeration value="NH" />
+      <xs:enumeration value="NJ" />
+      <xs:enumeration value="NM" />
+      <xs:enumeration value="NV" />
+      <xs:enumeration value="NY" />
+      <xs:enumeration value="OH" />
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="OR" />
+      <xs:enumeration value="PA" />
+      <xs:enumeration value="RI" />
+      <xs:enumeration value="SC" />
+      <xs:enumeration value="SD" />
+      <xs:enumeration value="TN" />
+      <xs:enumeration value="TX" />
+      <xs:enumeration value="UT" />
+      <xs:enumeration value="VA" />
+      <xs:enumeration value="VT" />
+      <xs:enumeration value="WA" />
+      <xs:enumeration value="WI" />
+      <xs:enumeration value="WV" />
+      <xs:enumeration value="WY" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

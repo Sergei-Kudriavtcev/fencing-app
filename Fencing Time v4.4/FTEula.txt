@@ -1,0 +1,27 @@
+END-USER LICENSE AGREEMENT
+--------------------------
+Fencing Time, LLC hereby gives you ("the Licensee") a non-exclusive license to use the software "Fencing Time" ("Software").
+
+The Licensee may:  
+- use the Software on any single computer;  
+- copy the Software for archival purposes, provided that any copy contains all of the original Software's proprietary notices.  
+ 
+The Licensee may not:  
+- permit other entities to use the Software except under the terms listed above;
+- modify, translate, reverse engineer, decompile, or disassemble the Software (except to the extent applicable laws specifically prohibit such restriction);  
+- create derivative works based on the Software;  
+- copy the Software (except as specified above);  
+- rent, lease, transfer or otherwise transfer rights to the Software;  
+- remove any proprietary notices or labels on the Software; or
+- run any world or zonal championship events without the written consent of Fencing Time, LLC.
+
+Title, ownership rights, and intellectual property rights in and to the Software shall remain with Fencing Time, LLC.  This software is protected by international copyright treaties.  
+ 
+The license will terminate automatically if the Licensee fails to comply with the limitations described above.  On termination, the Licensee must destroy all copies of the Software.
+
+In the event of a malfunction or crash in the Software, error log data may be transmitted to Fencing Time, LLC in order to analyze it and fix in-field bugs.  This data does not contain private information.  Fencing Time, LLC does not collect documents or other files from the Licensee's computer, and this collection is done purely in an effort to provide a quality product.
+ 
+DISCLAIMER OF WARRANTY  
+--------------------------------------------- 
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS.  FENCING TIME, LLC DISCLAIMS ALL WARRANTIES RELATING TO THIS SOFTWARE, WHETHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  NEITHER FENCING TIME, LLC NOR ANYONE WHO HAS BEEN INVOLVED IN THE CREATION, PRODUCTION, OR DELIVERY OF THIS SOFTWARE SHALL BE LIABLE FOR ANY INDIRECT, CONSEQUENTIAL, OR INCIDENTAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE SUCH SOFTWARE.  THE PERSON OR ORGANIZATION USING THE SOFTWARE BEARS ALL RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE. 
+

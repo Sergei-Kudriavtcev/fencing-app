@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Daniel Berke 
+-->
+<UsfaQualRules xmlns="http://www.fencingtime.com" version="4.4">
+  <EffectiveDate AsOf="January 1, 2017" />
+  <WithdrawAffectsNumComps  Value="True" />
+  <BlackCardAffectsNumComps Value="True" />
+  <BlackCardEatsQuals       Value="True" />
+  
+  <!-- RYCs -->
+  <SimpleRule RuleID="500" Name="Youth-14 (via RYC)" Event="POINTS" MinForPoints="2" PointsPercent="100" InRegionOnly="True" />
+  <SimpleRule RuleID="501" Name="Youth-12 (via RYC)" Event="POINTS" MinForPoints="2" PointsPercent="100" InRegionOnly="True" />
+  <SimpleRule RuleID="502" Name="Youth-10 (via RYC)" Event="POINTS" MinForPoints="2" PointsPercent="100" InRegionOnly="True" />
+
+  <!-- SYCs -->
+  <SimpleRule RuleID="503" Name="Youth-14 (via SYC)" Event="POINTS" MinForPoints="3" PointsPercent="40" PointsMax="64" />
+  <SimpleRule RuleID="504" Name="Youth-12 (via SYC)" Event="POINTS" MinForPoints="3" PointsPercent="40" PointsMax="64" />
+  <SimpleRule RuleID="505" Name="Youth-10 (via SYC)" Event="POINTS" MinForPoints="3" PointsPercent="40" PointsMax="64" />
+
+  <!-- RJCCs -->
+  <SimpleRule RuleID="506" Name="Junior (via RJCC)" Event="POINTS" MinForPoints="2" PointsPercent="100" InRegionOnly="True" />
+  <SimpleRule RuleID="507" Name="Cadet (via RJCC)"  Event="POINTS" MinForPoints="2" PointsPercent="100" InRegionOnly="True" />
+
+  <!-- SJCCs -->
+  <SimpleRule RuleID="508" Name="Junior (via SJCC)" Event="POINTS" MinForPoints="2" PointsPercent="40" PointsMax="64" />
+  <SimpleRule RuleID="509" Name="Cadet (via SJCC)"  Event="POINTS" MinForPoints="2" PointsPercent="40" PointsMax="64" />
+  
+  <!-- ROCs -->
+  <SimpleRule RuleID="100" Name="Division I-A (via Div I-A ROC)" Event="POINTS" Field="Open"  QualifyVets="True" AllowForeign="True" PointsPercent="40" PointsMax="64" />
+  <SimpleRule RuleID="201" Name="Division II (via Div II ROC)"   Event="POINTS" Field="DivII" QualifyVets="True" AllowForeign="True" PointsPercent="40" PointsMax="64" />
+  <SimpleRule RuleID="400" Name="Veteran (via Veteran ROC)"      Event="POINTS" Field="Open"  QualifyVets="True" AllowForeign="True" PointsPercent="40" PointsMax="64" />
+
+  <!-- Division qualifiers -->
+  <SimpleRule RuleID="200" Name="Division II (via Division Qualifier)"  Event="DV2" Percent="25" Field="DivII"  Minimum="3" QualifyVets="True" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="DV2" />
+      <Event Code="DV3" />
+    </QualifiedFor>
+  </SimpleRule>
+  <SimpleRule RuleID="300" Name="Division III (via Division Qualifier)" Event="DV3" Percent="25" Field="DivIII" Minimum="3" QualifyVets="True" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="DV3" />
+    </QualifiedFor>
+  </SimpleRule>
+  <CompositeRule RuleID="230" Name="Division II &amp; III Combined (via Division Qualifier)" TrickleDown="True" QualifyVets="True" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="DV2" />
+      <Event Code="DV3" />
+    </QualifiedFor>
+  </CompositeRule>
+  <SimpleRule RuleID="140" Name="Youth-14 Nationals (via Division Qualifier)" Event="Y14" Percent="25" Minimum="3" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="Y14" />
+    </QualifiedFor>
+  </SimpleRule>
+  <SimpleRule RuleID="190" Name="Junior Olympics (Junior)" Event="U20" Percent="25" Minimum="3" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="U20" />
+      <Event Code="U17" />
+    </QualifiedFor>
+  </SimpleRule>
+  <SimpleRule RuleID="160" Name="Junior Olympics (Cadet)" Event="U17" Percent="25" Minimum="3" AllowForeign="False" SkipPreQuals="True">
+    <QualifiedFor>
+      <Event Code="U17" />
+    </QualifiedFor>
+  </SimpleRule>
+</UsfaQualRules>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Daniel Berke 
+-->
+<PointRanksCsvFormats xmlns="http://www.fencingtime.com" version="4.4">
+  <CsvFormat authority="*" useSemicolons="False" multi="False">
+    <Description>A basic point rankings file</Description>
+    <ColumnList>
+      <Column fieldType="MemberNum" colIndex="0" header="MemberNum" />
+      <Column fieldType="PointRank" colIndex="1" header="Rank" />
+      <Column fieldType="FullName"  colIndex="2" header="Name" />
+    </ColumnList>  
+  </CsvFormat>
+  
+  <CsvFormat authority="USFA" useSemicolons="False" multi="False">
+    <Description>A point ranking file downloaded from www.askfred.net</Description>
+  	<ColumnList>
+      <Column fieldType="PointRank" colIndex="0" header="Rank" />
+      <Column fieldType="LastName"  colIndex="2" header="Last Name" />
+      <Column fieldType="FirstName" colIndex="3" header="First Name" />
+      <Column fieldType="MemberNum" colIndex="5" header="USFA Number" />
+    </ColumnList>  
+  </CsvFormat>
+
+  <CsvFormat authority="*" useSemicolons="False" multi="True">
+    <Description>A basic point rankings file with rankings for multiple point lists</Description>
+    <ColumnList>
+      <Column fieldType="MemberNum"       colIndex="0" header="MemberNum" />
+      <Column fieldType="PointRank"       colIndex="1" header="Rank" />
+      <Column fieldType="FullName"        colIndex="2" header="Name" />
+      <Column fieldType="PointListName"   colIndex="3" header="List Name" />
+      <Column fieldType="PointListGender" colIndex="4" header="List Gender" />
+      <Column fieldType="PointListWeapon" colIndex="5" header="List Weapon" />
+    </ColumnList>  
+  </CsvFormat>
+  
+  <CsvFormat authority="CFF" useSemicolons="True" multi="False">
+    <Description>A Canadian CFF member ranking file</Description>
+    <ColumnList>
+      <Column fieldType="LastName"   	    colIndex="0" header="LastName" />
+      <Column fieldType="FirstName"       colIndex="1" header="FirstName" />
+      <Column fieldType="MemberNum"  	    colIndex="7" header="CFF Licence" />
+      <Column fieldType="PointRank"  	    colIndex="9" header="Rank" />
+    </ColumnList>  
+  </CsvFormat>
+  
+</PointRanksCsvFormats>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Daniel Berke 
+-->
+<FencerCsvFormats xmlns="http://www.fencingtime.com" version="4.4">
+  <CsvFormat authority="USFA" useSemicolons="False">
+    <Description>The current member list downloaded from the USFA website</Description>
+    <ColumnList>
+      <Column fieldType="LastName"   	     colIndex="0"  header="Last Name" />
+      <Column fieldType="FirstName"        colIndex="1"  header="First Name" />
+      <Column fieldType="MiddleName"       colIndex="2"  header="Middle Name" />
+      <Column fieldType="Suffix"           colIndex="3"  header="Suffix" />
+      <Column fieldType="NickName"         colIndex="4"  header="Nickname" />
+      <Column fieldType="Gender"           colIndex="5"  header="Gender" />
+      <Column fieldType="BirthDate"        colIndex="6"  header="Birthdate" />
+      <Column fieldType="BDVerified"       colIndex="7"  header="Birthdate verified" />
+      <Column fieldType="Division"   	     colIndex="8"  header="Division" />
+      <Column fieldType="ClubName"   	     colIndex="10" header="Club 1 Name" />
+      <Column fieldType="ClubAbbr"   	     colIndex="11" header="Club 1 Abbreviation" />
+      <Column fieldType="ClubMemberNum"    colIndex="12" header="Club 1 ID#" />
+      <Column fieldType="Club2Name"   	   colIndex="13" header="Club 2 Name" />
+      <Column fieldType="Club2Abbr"   	   colIndex="14" header="Club 2 Abbreviation" />
+      <Column fieldType="Club2MemberNum"   colIndex="15" header="Club 2 ID#" />
+      <Column fieldType="MemberNum"  	     colIndex="19" header="Member #" />
+      <Column fieldType="IsCheckEd"	       colIndex="21" header="CheckEd" />
+      <Column fieldType="MemberType"	     colIndex="22" header="Competitive" />
+      <Column fieldType="MemberExpiration" colIndex="23" header="Expiration" />
+      <Column fieldType="SaberWeapRating"  colIndex="24" header="Saber" />
+      <Column fieldType="EpeeWeapRating"   colIndex="25" header="Epee" />
+      <Column fieldType="FoilWeapRating"   colIndex="26" header="Foil" />
+      <Column fieldType="Country"       	 colIndex="29" header="Representing Country" />
+      <Column fieldType="Region"           colIndex="30" header="Region #" /> 
+      <Column fieldType="BGExpiration"     colIndex="31" header="Background Check Expires" /> 
+      <Column fieldType="SSExpiration"     colIndex="32" header="SafeSport Expires" /> 
+    </ColumnList>  
+    <MemberTypeFilter include="Competitive" />
+  </CsvFormat>
+  
+  <CsvFormat authority="CFF" useSemicolons="True">
+    <Description>A Canadian CFF member ranking file</Description>
+    <ColumnList>
+      <Column fieldType="LastName"   	    colIndex="0" header="LastName" />
+      <Column fieldType="FirstName"       colIndex="1" header="FirstName" />
+      <Column fieldType="BirthDate"       colIndex="2" header="YOB" />
+      <Column fieldType="Gender"   	      colIndex="3" header="Gender" />
+      <Column fieldType="ClubAbbr"   	    colIndex="4" header="Club" />
+      <Column fieldType="ClubMemberNum"  	colIndex="4" header="Club" />
+      <Column fieldType="Division"   	    colIndex="5" header="Prov" />
+      <Column fieldType="Country"    	    colIndex="6" header="Country" />
+      <Column fieldType="MemberNum"  	    colIndex="7" header="CFF Licence" />
+      <Column fieldType="PointRank"  	    colIndex="9" header="Rank" />
+    </ColumnList>  
+  </CsvFormat>
+  
+  <CsvFormat authority="CFF" useSemicolons="False">
+    <Description>A Canadian CFF member validation file</Description>
+    <ColumnList>
+      <Column fieldType="LastName"   	    colIndex="0" header="Surname" />
+      <Column fieldType="FirstName"       colIndex="1" header="Name" />
+      <Column fieldType="BirthDate"       colIndex="2" header="YOB" />
+      <Column fieldType="Gender"   	      colIndex="3" header="Gender" />
+      <Column fieldType="ClubMemberNum"  	colIndex="4" header="Club" />
+      <Column fieldType="Division"   	    colIndex="5" header="Branch" />
+      <Column fieldType="Country"   	    colIndex="6" header="Country" />
+      <Column fieldType="MemberNum"  	    colIndex="7" header="CFF Number" />
+      <Column fieldType="MemberType"      colIndex="8" header="Validated" />
+    </ColumnList>  
+    <MemberTypeFilter include="y" />
+  </CsvFormat>
+  
+</FencerCsvFormats>

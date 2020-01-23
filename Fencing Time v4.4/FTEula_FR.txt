@@ -1,0 +1,26 @@
+CONTRAT DE LICENCE UTILISATEUR FINAL
+------------------------------------
+Fencing Time, LLC vous donne («le Titulaire») une licence non-exclusive pour utiliser le logiciel «Fencing Time» («Logiciel»).
+
+Le Licencié peut:
+- Utiliser le Logiciel sur un seul ordinateur;
+- Une copie du Logiciel à des fins d'archivage, à condition que toute copie contienne toutes les notes de propriété du Logiciel original.
+ 
+Le Licencié ne peut pas:
+- permettre à des entités autres d'utiliser le Logiciel, sauf dans les conditions énumérées ci-dessus;
+- modifier, traduire, désosser, décompiler ou désassembler le Logiciel (sauf dans la mesure où les lois applicables interdisent de telles restrictions);
+- créer des œuvres dérivées basées sur le Logiciel;
+- copier le Logiciel (sauf indication contraire ci-dessus);
+- louer, transférer ou autrement transférer les droits sur le Logiciel;
+- supprimer les mentions ou étiquettes de propriété sur le Logiciel; ou
+- courir de championnat du monde ou zonale des événements sans le consentement écrit de Fencing Time, LLC.
+
+Tout titre, droit de propriété et droits de propriété intellectuelle dans et concernant le Logiciel restent avec Fencing Time, LLC. Ce logiciel est protégé par les traités internationaux sur le copyright.
+ 
+La licence sera automatiquement résilié si le Licencié ne respecte pas les limites décrites ci-dessus. En cas de résiliation, le titulaire doit détruire toutes les copies du Logiciel.
+
+En cas de dysfonctionnement ou de panne dans le Logiciel, les données du journal des erreurs peut être transmis à Fencing Time, LLC afin de l'analyser et corriger des bugs dans le terrain. Ces données ne contiennent pas d'informations privées. Fencing Time, LLC ne collecte pas des documents ou d'autres fichiers de l'ordinateur par le Licencié, et cette collection est faite uniquement dans le but de fournir un produit de qualité.
+ 
+EXCLUSION DE GARANTIE
+---------------------------------------------
+CE LOGICIEL EST FOURNI "EN L'ÉTAT". FENCING TIME, LLC REJETTE TOUTE GARANTIE CONCERNANT CE LOGICIEL, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS SANS S'Y LIMITER, TOUTE GARANTIE IMPLICITE DE QUALITÉ MARCHANDE OU D'ADEQUATION A UN USAGE PARTICULIER. NI LE FENCING TIME, LLC NI TOUTE PERSONNE IMPLIQUÉE DANS LA CRÉATION, LA PRODUCTION OU LA LIVRAISON DE CE LOGICIEL NE SERA RESPONSABLE DE DOMMAGES INDIRECTS, CONSÉCUTIFS, ACCESSOIRES OU PROVENANT DE L'UTILISATION OU L'INCAPACITE D'UTILISER CE LOGICIEL. LA PERSONNE OU ORGANISATION UTILISANT LE LOGICIEL ASSUME TOUT RISQUE RELATIF À LA QUALITÉ ET LA PERFORMANCE DU LOGICIEL.

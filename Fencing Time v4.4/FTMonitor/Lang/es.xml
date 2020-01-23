@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LocalizedText xmlns="http://www.fencingtime.com">
+  <!-- General column headers -->
+  <LocText id="TeamName">Nombre del equipo</LocText>
+  <LocText id="Name">Nombre</LocText>
+  <LocText id="Class">Class.</LocText>
+  <LocText id="Rank">Rango</LocText>
+  <LocText id="ClassRank">Class./Rango</LocText>
+  <LocText id="Points">Puntos</LocText>
+  <LocText id="Clubs">Club(s)</LocText>
+  <LocText id="Division">Región</LocText>
+  <LocText id="Country">País</LocText>
+  <LocText id="Status">Estado</LocText>
+  <LocText id="Touches">Puntos</LocText>
+  <LocText id="Score">Resultado</LocText>
+  <LocText id="Winner">Triunfador</LocText>
+  <LocText id="evNameFormat">LEV AGE WC WEAP GEN TEAM</LocText>
+  <LocText id="FencerName">Nombre del esgrimista</LocText>
+  <LocText id="Club">Club</LocText>
+  <LocText id="Birthdate">Fecha de nacimiento</LocText>
+  <LocText id="Gender">Género</LocText>
+  <LocText id="TeamRank">Rango del equipo</LocText>
+  <LocText id="FencerRank">Rango esgrimista</LocText>
+  <LocText id="Male">Masculino</LocText>
+  <LocText id="Announcement">Anuncio</LocText>
+  <LocText id="Female">Femenino</LocText>
+
+  <!-- Daily schedule -->
+  <LocText id="Schedule">Programar</LocText>
+  <LocText id="RegCloses">Ultimo día de Inscripción</LocText>
+  <LocText id="Wheelchair">Silla de ruedas</LocText>
+  <LocText id="WheelchairA">Silla de ruedas (A)</LocText>
+  <LocText id="WheelchairB">Silla de ruedas (B)</LocText>
+  <LocText id="WheelchairC">Silla de ruedas (C)</LocText>
+  <LocText id="mens">de los hombres</LocText>
+  <LocText id="womens">de las mujeres</LocText>
+  <LocText id="mixed">Mixto</LocText>
+  <LocText id="foil">Florete</LocText>
+  <LocText id="epee">Espada</LocText>
+  <LocText id="saber">Sable</LocText>
+  <LocText id="3weapon">3-Arma</LocText>
+  <LocText id="Team">Equipo</LocText>
+  <LocText id="Event">Evento</LocText>
+  <LocText id="January">enero</LocText>
+  <LocText id="February">feberero</LocText>
+  <LocText id="March">marzo</LocText>
+  <LocText id="April">abril</LocText>
+  <LocText id="May">mayo</LocText>
+  <LocText id="June">junio</LocText>
+  <LocText id="July">julip</LocText>
+  <LocText id="August">agosto</LocText>
+  <LocText id="September">septiembre</LocText>
+  <LocText id="October">octubre</LocText>
+  <LocText id="November">noviembre</LocText>
+  <LocText id="December">diciembre</LocText>
+
+  <!-- Check-in list -->
+  <LocText id="EventCompetitors">Competidores de eventos</LocText>
+  <LocText id="EventTeams">Equipos de eventos</LocText>
+  <LocText id="of">de</LocText>
+  <LocText id="teams">equipos</LocText>
+  <LocText id="fencers">tiradores</LocText>
+  <LocText id="checkedin">presentar</LocText>
+  <LocText id="StatusCheckedIn">presentar</LocText>
+  <LocText id="StatusScratched">rayado</LocText>
+  <LocText id="AbsentFencers">Tiradores ausentes</LocText>
+  <LocText id="AbsentTeams">Equipos ausentes</LocText>
+  <LocText id="Reserve">suplente</LocText>
+  <LocText id="Weapon">Arma</LocText>
+
+  <!-- Seeding -->
+  <LocText id="CurrentSeeding">Clasificación actual ronda</LocText>
+  <LocText id="InitialSeeding">clasificación preliminar</LocText>
+  <LocText id="Seed">Rango</LocText>
+  <LocText id="Exempt from this round">Exentos de esta ronda</LocText>
+  <LocText id="Withdrew">Se retiro</LocText>
+  <LocText id="Excluded">Excluidos</LocText>
+  <LocText id="Failed to appear">No se presentó</LocText>
+  <LocText id="Eliminated">eliminado</LocText>
+  <LocText id="Advanced">avanzado</LocText>
+
+  <!-- Strip assignments -->
+  <LocText id="PoolStripAssignments">Poule asignaciones tiras redondas</LocText>
+  <LocText id="ElimStripAssignments">Asignaciones tira ronda eliminatoria</LocText>
+  <LocText id="PoolNum">Poule #</LocText>
+  <LocText id="Strip">Tira</LocText>
+  <LocText id="Time">Hora</LocText>
+  <LocText id="Role">Papel</LocText>
+  <LocText id="RefStripAssignments">Asignaciones de pistas Árbitro</LocText>
+  <LocText id="Assignment">Asignación</LocText>
+
+  <!-- Results -->
+  <LocText id="FinalResults">los resultados finales</LocText>
+  <LocText id="ResultsSoFar">Resultados actuales</LocText>
+  <LocText id="Place">Rango</LocText>
+  <LocText id="Earned">ganado</LocText>
+  <LocText id="QualFor">Clasificados para</LocText>
+  <LocText id="FencerExcluded">Tirador Excluidos</LocText>
+  <LocText id="FencerScratched">Tirador Rayado</LocText>
+  <LocText id="TeamExcluded">Equipo Excluidos</LocText>
+  <LocText id="TeamScratched">Equipo Rayado</LocText>
+  <LocText id="LiveResults">Resultados en directo en</LocText>
+
+  <!-- Pools -->
+  <LocText id="WithdrewParen">(retiró)</LocText>
+  <LocText id="ExcludedParen">(excluidos)</LocText>
+  <LocText id="NoShowParen">(ausente)</LocText>
+  <LocText id="Referees">árbitro(s):</LocText>
+  <LocText id="TS">TD</LocText>
+  <LocText id="TR">TR</LocText>
+
+  <!-- Temporary pool results -->
+  <LocText id="TemporaryPoolResults">Los resultados provisionales de poules</LocText>
+  <LocText id="CertainPromotion">Cierto avance</LocText>
+  <LocText id="LikelyPromotion">Probable avance</LocText>
+  <LocText id="PossiblePromotion">Posible avance</LocText>
+  <LocText id="PossibleElimination">Eliminación posible</LocText>
+  <LocText id="LikelyElimination">Eliminación probable</LocText>
+
+  <!-- DE tables -->
+  <LocText id="onStrip">En pista</LocText>
+  <LocText id="atTime">a la</LocText>
+  <LocText id="ref">árb</LocText>
+  <LocText id="video">video</LocText>
+  <LocText id="assist">asist</LocText>
+  <LocText id="fo3">Partido por el tercer</LocText>
+  <LocText id="finals">Final</LocText>
+  <LocText id="semifinals">semifinales</LocText>
+  <LocText id="tableOf">Tabla de </LocText>
+
+  <!-- Repechage tables -->
+  <LocText id="tableA16">Tabla A (16)</LocText>
+  <LocText id="tableA32">Tabla A (32)</LocText>
+  <LocText id="tableB8">Tabla B (8)</LocText>
+  <LocText id="tableB16">Tabla B (16)</LocText>
+  <LocText id="tableC8">Tabla C (8)</LocText>
+  <LocText id="tableD8">Tabla D (8)</LocText>
+  <LocText id="tableD16">Tabla D (16)</LocText>
+  <LocText id="tableE8">Tabla E (8)</LocText>
+  <LocText id="tableE16">Tabla E (16)</LocText>
+  <LocText id="tableF8">Tabla F (8)</LocText>
+  <LocText id="tableG8">Tabla G (8)</LocText>
+  <LocText id="tableH8">Tabla H (8)</LocText>
+
+  <!-- APF tables -->
+  <LocText id="table9_16">Tabla de 8 (rangos 9-16)</LocText>
+  <LocText id="table9_12">Tabla de 4 (rangos 9-12)</LocText>
+  <LocText id="table9_10">Tabla de 2 (rangos 9-10)</LocText>
+  <LocText id="table3_4">Medalla de bronce</LocText>
+  <LocText id="table5_8">Tabla de 4 (rangos 5-8)</LocText>
+  <LocText id="table5_6">Tabla de 2 (rangos 5-6)</LocText>
+  <LocText id="table7_8">Tabla de 2 (rangos 7-8)</LocText>
+  <LocText id="table11_12">Tabla de 2 (rangos 11-12)</LocText>
+  <LocText id="table13_16">Tabla de 4 (rangos 13-16)</LocText>
+  <LocText id="table13_14">Tabla de 2 (rangos 13-14)</LocText>
+  <LocText id="table15_16">Tabla de 2 (rangos 15-16)</LocText>
+
+  <!--Event format -->
+  <LocText id="EF_NumComps">%1 tiradores se esgrima en este evento.</LocText>
+  <LocText id="EF_RoundNum">Ronda #</LocText>
+  <LocText id="EF_Pool">Poules</LocText>
+  <LocText id="EF_Elim">Eliminación Directa</LocText>
+  <LocText id="EF_Rep32">Eliminación Directa con Repêchage desde 32</LocText>
+  <LocText id="EF_Rep16">Eliminación Directa con Repêchage desde 16</LocText>
+  <LocText id="EF_APF16">Eliminación directa con matches para todos los lugares desde 16</LocText>
+  <LocText id="EF_APF8">Eliminación directa con matches para todos los lugares desde 8</LocText>
+  <LocText id="EF_SeedsFixed">Rango 1-%1 son fijos.</LocText>
+  <LocText id="EF_SeedsRandInPairs">Rango %1-%2 se asignó al azar en parejas.</LocText>
+  <LocText id="EF_TopExempt">Las %1 mejores competidores están exentos de esta ronda.</LocText>
+  <LocText id="EF_NumPools">%1 poules</LocText>
+  <LocText id="EF_OnePoolOfX">Un poule de %1</LocText>
+  <LocText id="EF_PoolsOfX">%1 poules de %2</LocText>
+  <LocText id="EF_OnePoolOfXandY">Un poule de %1 y %2 poules de %3</LocText>
+  <LocText id="EF_PoolsOfXandOneOfY">%1 poules de %2 y un poule de %3</LocText>
+  <LocText id="EF_OnePoolOfXandOneOfY">Un poule de %1 y un poule de %2</LocText>
+  <LocText id="EF_PoolsOfXandY">%1 poules de %2 y %3 poules de %4</LocText>  
+  <LocText id="EF_NoNumPoolsOfX">Poules de %1</LocText>
+  <LocText id="EF_NoNumPoolsOfXandY">Poules de %1 y %2</LocText>
+  <LocText id="EF_PromoteAll">Todos los tiradores (100%) promovidos a la ronda siguiente</LocText>
+  <LocText id="EF_PromoteSome">%1 tiradores (%2% of %3) serán promovidos a la siguiente ronda.</LocText>
+  <LocText id="EF_CombinedResults">Los resultados de los últimos %1 rondas poule se combinarán para sembrar la siguiente ronda.</LocText>
+  <LocText id="EF_CompleteDE">Tabla completa de %1</LocText>
+  <LocText id="EF_IncompleteDE">Tabla incompleta de %1</LocText>
+  <LocText id="EF_ThruFinals">esgrimir hasta las finales.</LocText>
+  <LocText id="EF_FenceOff">Esgrimir por el tercio.</LocText>
+  <LocText id="EF_NoFenceOff">No esgrimir por el tercio.</LocText>
+  <LocText id="EF_FenceTo">esgrimir hasta que queden %1 tiradores.</LocText>
+  <LocText id="EF_CompleteDERep">ED Tabla de %1 es completa con repêchage desde %2 a un final de 8.</LocText>
+  <LocText id="EF_IncompleteDERep">ED Tabla de %1 es incompleta con repêchage desde %2 a un final de 8.</LocText>
+  <LocText id="EF_CompleteDEAPF">ED Tabla de %1 es completa con matches para todos los lugares desde %2.</LocText>
+  <LocText id="EF_IncompleteDEAPF">ED Tabla de %1 es incompleta con matches para todos los lugares desde %2.</LocText>
+
+  <!-- Round types -->
+  <LocText id="RT_Pool">Poules</LocText>
+  <LocText id="RT_SingleElim">ED Tabla</LocText>
+  <LocText id="RT_Rep32">ED con repêchage de 32</LocText>
+  <LocText id="RT_Rep16">ED con repêchage de 16</LocText>
+  <LocText id="RT_APF16">ED con matches para todos los lugares desde 16</LocText>
+  <LocText id="RT_APF8">ED con matches para todos los lugares desde 8</LocText>
+
+</LocalizedText>

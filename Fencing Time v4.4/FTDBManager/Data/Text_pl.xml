@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Fencing Time, LLC and Daniel Berke 
+-->
+<LocalizedText xmlns="http://www.fencingtime.com" version="4.4">
+  <!-- General text -->
+  <LocText id="LiveResults">Wyniki na żywo</LocText>                              
+  <LocText id="LRGenerated">Wyniki na żywo generowane przez</LocText>
+  <LocText id="GeneratedBy">Wyniki generowane przez</LocText>
+  <LocText id="TournSW">- oprogramowanie do prowadzenia zawodów</LocText>
+
+  <!-- Index page -->
+  <LocText id="LastUpdated">Ostatnia aktualizacja</LocText>
+  <LocText id="EventSchedule">Harmonogram zawodów</LocText>
+  <LocText id="Time">Czas</LocText>
+  <LocText id="Event">Turniej</LocText>
+  <LocText id="Details">Szczegóły</LocText>
+  <LocText id="View">Widok</LocText>
+  <LocText id="Medals">Medale</LocText>
+  <LocText id="Gold">Złote</LocText>
+  <LocText id="Silver">Srebrne</LocText>
+  <LocText id="Bronze">Brązowe</LocText>
+  <LocText id="Total">Ogółem</LocText>
+  <LocText id="MedalCounts">Klasyfikacja medalowa</LocText>
+
+  <!-- Event page -->
+  <LocText id="EventFormat">Formuła turnieju</LocText>
+  <LocText id="ReturnToSched">Wróć do harmonogramu</LocText>
+  <LocText id="PrelimSeeding">Wstępne rozstawienie</LocText>
+  <LocText id="CheckInStatus">Status zgłoszeń</LocText>
+  <LocText id="CompCheckInStatus">Status zgłoszeń szermierzy</LocText>
+  <LocText id="EventFencers">Szermierze</LocText>
+  <LocText id="ResultsSoFar">Klasyfikacja generalna</LocText>
+  <LocText id="FinalResults">Klasyfikacja generalna</LocText>
+  <LocText id="FinishTime">Turniej zakończony o</LocText>
+  <LocText id="Seeding">Rozstawienie</LocText>
+  <LocText id="StripsByName">Przypisane plansz według nazwisk</LocText>
+  <LocText id="StripsByClub">Przypisane plansz według klubów</LocText>
+  <LocText id="Pools">Grupy</LocText>
+  <LocText id="Tableau">Tabela</LocText>
+  <LocText id="Scores">Wyniki</LocText>
+  <LocText id="RoundSeeding">Rozstawienie po grupach</LocText>
+  <LocText id="RoundScores">Wyniki po grupach</LocText>
+  <LocText id="NumFencers">łączna liczba szermierzy:</LocText>
+  <LocText id="NumTeams">łączna liczba zespołów:</LocText>
+  <LocText id="RoundNum">Runda nr</LocText>
+  
+  <!-- General column headers -->
+  <LocText id="Status">Status</LocText>
+  <LocText id="Name">Nazwisko / Nazwa drużyny</LocText>
+  <LocText id="Club">Klub</LocText>
+  <LocText id="Clubs">Klub</LocText>
+  <LocText id="Division">okręg</LocText>
+  <LocText id="Country">Kraj</LocText>
+  <LocText id="Seed">Rozstawienie</LocText>
+  <LocText id="Points">Punkty</LocText>
+  <LocText id="Class">Klasyfikacja</LocText>
+  <LocText id="Rank">Ranking</LocText>
+  <LocText id="ClassRank">Ranking</LocText>
+  <LocText id="MemNum">Numer</LocText>
+  <LocText id="Members">Członkowie</LocText>
+  <LocText id="Place">Miejsce</LocText>
+  <LocText id="Earned">Zajęte</LocText>
+  <LocText id="QualFor">Zakwalifikowany do</LocText>
+  <LocText id="FencerName">Nazwisko szermierza</LocText>
+  <LocText id="TeamName">Nazwa drużyny</LocText>
+  <LocText id="Birthdate">Data urodzenia</LocText>
+  <LocText id="Gender">Płeć</LocText>
+  <LocText id="TeamRank">Ranking drużyny</LocText>
+  <LocText id="FencerRank">Ranking szermierza</LocText>
+  <LocText id="Male">Mężczyzna</LocText>
+  <LocText id="Female">Kobieta</LocText>
+
+  <!-- Temporary pool results -->
+  <LocText id="TemporaryPoolResults">Tymczasowy ranking po grupach</LocText>
+  <LocText id="CertainPromotion">Pewny awans</LocText>
+  <LocText id="LikelyPromotion">Prawdopodobny awans</LocText>
+  <LocText id="PossiblePromotion">Możliwy awans</LocText>
+  <LocText id="PossibleElimination">Możliwa eliminacja</LocText>
+  <LocText id="LikelyElimination">Prawdopodobna eliminacja</LocText>
+  
+  <!-- Misc text -->
+  <LocText id="Of">z</LocText>
+  <LocText id="CompsCheckedIn">potwierdziło obecność</LocText>
+  <LocText id="FencerExcluded">Szermierz zdyskwalifikowany (E)</LocText>
+  <LocText id="FencerScratched">Szermierz wycofany (F)</LocText>
+  <LocText id="TeamExcluded">Drużyna zdyskwalifikowana (E)</LocText>
+  <LocText id="TeamScratched">Drużyna wycofana (F)</LocText>
+  <LocText id="Exempt">Zwolnieni w tej rundzie</LocText>
+  <LocText id="Withdrew">Kontuzja (A)</LocText>
+  <LocText id="Excluded">Zdyskwalifikowany (E)</LocText>
+  <LocText id="FailedToAppear">Wycofany(F)</LocText>
+  <LocText id="Eliminated">Wyeliminowany (a)</LocText>
+  <LocText id="Advanced">Zakwalifikowany (a)</LocText>
+  <LocText id="PoolNum">Grupa nr</LocText>
+  <LocText id="Strip">Plansza</LocText>
+  <LocText id="Score">Wynik</LocText>
+  <LocText id="Referees">Sędzia:</LocText>
+  <LocText id="TS">TZ</LocText>
+  <LocText id="TR">TO</LocText>
+  
+  <!-- DE tableau -->
+  <LocText id="ViewFrom">Pokaż: </LocText>
+  <LocText id="TableOf">tabela</LocText>
+  <LocText id="OnStrip">Na planszy</LocText>
+  <LocText id="At">o godz.</LocText>
+  <LocText id="Ref">Sędzia</LocText>
+  <LocText id="Video">Wideo</LocText>
+  <LocText id="Assist">Asyst.</LocText>
+  <LocText id="MatchDetails">Szczegóły meczu</LocText>
+  <LocText id="LiveScores">Wyniki na żywo</LocText>
+</LocalizedText>

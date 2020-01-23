@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+Fencing Time
+By Daniel Berke
+(C) Copyright by Daniel Berke 
+-->
+<EventClassificationChart xmlns="http://www.fencingtime.com" version="4.4">
+  <EffectiveDate AsOf="January 1, 2017" />
+  <WithdrawAffectsNumComps        Value="True" />
+  <WithdrawAffectsRatingsPresent  Value="True" />
+  <BlackCardAffectsNumComps       Value="True" />
+  <BlackCardAffectsRatingsPresent Value="True" />
+
+  <Group name="E1" minfencers="6" agerestricted="true">
+    <RatedFencersRequired />
+    <RatedMustFinish />
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="D1" minfencers="15" agerestricted="true">
+    <RatedFencersRequired>
+      <Fencers count="4" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="E" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="D" />
+      <Place start="2" end="4" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="C1" minfencers="15" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="C" />
+      <Fencers count="2" rating="D" />
+      <Fencers count="2" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="C" />
+        <Fencers count="2" rating="D" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="C" />
+      <Place start="2" end="4" rating="D" />
+      <Place start="5" end="8" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="C2" minfencers="25" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="4" rating="D" />
+      <Fencers count="4" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="4" rating="D" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="C" />
+      <Place start="2" end="4" rating="D" />
+      <Place start="5" end="8" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="C3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="24" rating="D" />
+      <Fencers count="12" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="4" rating="D" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="E" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="4" rating="C" />
+      <Place start="5" end="8" rating="D" />
+      <Place start="9" end="16" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="B1" minfencers="15" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+      <Fencers count="2" rating="D" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="B" />
+        <Fencers count="2" rating="C" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="B" />
+      <Place start="2" end="4" rating="C" />
+      <Place start="5" end="6" rating="D" />
+      <Place start="7" end="8" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="B2" minfencers="25" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+      <Fencers count="2" rating="D" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="B" />
+        <Fencers count="2" rating="C" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="B" />
+      <Place start="2" end="4" rating="C" />
+      <Place start="5" end="8" rating="D" />
+      <Place start="9" end="12" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="B2/C3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+      <Fencers count="20" rating="D" />
+      <Fencers count="12" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="B" />
+        <Fencers count="2" rating="C" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="E" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="B" />
+      <Place start="2" end="4" rating="C" />
+      <Place start="5" end="8" rating="D" />
+      <Place start="9" end="16" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="B3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="24" rating="C" />
+      <Fencers count="12" rating="D" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="4" rating="C" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="D" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="4" rating="B" />
+      <Place start="5" end="8" rating="C" />
+      <Place start="9" end="16" rating="D" />
+      <Place start="17" end="32" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A1" minfencers="15" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="A" />
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="A" />
+        <Fencers count="2" rating="B" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="A" />
+      <Place start="2" end="2" rating="B" />
+      <Place start="3" end="4" rating="C" />
+      <Place start="5" end="6" rating="D" />
+      <Place start="7" end="8" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A2" minfencers="25" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="A" />
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="A" />
+        <Fencers count="2" rating="B" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="A" />
+      <Place start="2" end="4" rating="B" />
+      <Place start="5" end="8" rating="C" />
+      <Place start="9" end="10" rating="D" />
+      <Place start="11" end="12" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A2/C3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="A" />
+      <Fencers count="2" rating="B" />
+      <Fencers count="2" rating="C" />
+      <Fencers count="18" rating="D" />
+      <Fencers count="12" rating="E" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="A" />
+        <Fencers count="2" rating="B" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="E" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="A" />
+      <Place start="2" end="4" rating="B" />
+      <Place start="5" end="8" rating="C" />
+      <Place start="9" end="10" rating="D" />
+      <Place start="11" end="16" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A2/B3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="2" rating="A" />
+      <Fencers count="2" rating="B" />
+      <Fencers count="20" rating="C" />
+      <Fencers count="12" rating="D" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="2" rating="A" />
+        <Fencers count="2" rating="B" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="D" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="1" rating="A" />
+      <Place start="2" end="4" rating="B" />
+      <Place start="5" end="8" rating="C" />
+      <Place start="9" end="16" rating="D" />
+      <Place start="17" end="32" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A3" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="24" rating="B" />
+      <Fencers count="12" rating="C" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="4" rating="B" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="C" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="4" rating="A" />
+      <Place start="5" end="8" rating="B" />
+      <Place start="9" end="16" rating="C" />
+      <Place start="17" end="24" rating="D" />
+      <Place start="25" end="32" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <Group name="A4" minfencers="64" agerestricted="false">
+    <RatedFencersRequired>
+      <Fencers count="12" rating="A" />
+      <Fencers count="12" rating="B" />
+      <Fencers count="12" rating="C" />
+    </RatedFencersRequired>
+    <RatedMustFinish>
+      <Top num="8">
+        <Fencers count="4" rating="A" />
+      </Top>
+      <Top num="12">
+        <Fencers count="4" rating="B" />
+      </Top>
+    </RatedMustFinish>
+    <ClassificationsAwarded>
+      <Place start="1" end="8" rating="A" />
+      <Place start="9" end="16" rating="B" />
+      <Place start="17" end="24" rating="C" />
+      <Place start="25" end="32" rating="D" />
+      <Place start="33" end="48" rating="E" />
+    </ClassificationsAwarded>
+  </Group>
+
+  <NationalEventOverride level="DivI"   atleast="A4" />
+  <NationalEventOverride level="DivIA"  atleast="A3" />
+  <NationalEventOverride level="DivII"  atleast="B3" />
+  <NationalEventOverride level="DivIII" atleast="C3" />
+
+  <UnderAgeEvents>
+    <Event abbr="CDT" />
+    <Event abbr="U16" />
+    <Event abbr="Y14" />
+    <Event abbr="Y12" />
+    <Event abbr="Y10" />
+    <Event abbr="Y8" />
+  </UnderAgeEvents>
+  
+  
+</EventClassificationChart>
+

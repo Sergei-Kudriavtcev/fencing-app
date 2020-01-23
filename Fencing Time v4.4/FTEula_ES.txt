@@ -1,0 +1,26 @@
+LICENCIA DE USUARIO FINAL ACUERDO
+---------------------------------
+Fencing Time, LLC por este medio le da ("el Licenciatario") una licencia no exclusiva para utilizar el software "Fencing Time" ("Software").
+
+El cliente puede:
+- Utilizar el Software en una sola computadora;
+- Copia del Software con fines de archivo, siempre que la copia contenga todos los avisos de propiedad del Software original.
+ 
+El Licenciatario no podrá:
+- autorizar a otras entidades a utilizar el Software, excepto en los términos antes mencionados;
+- modificar, traducir, realizar ingeniería inversa, descompilar o desensamblar el Software (excepto en la medida que las leyes aplicables prohíben específicamente dicha restricción);
+- crear trabajos derivados basados en el Software;
+- copiar el Software (excepto como se especifica más arriba);
+- alquilar, arrendar, transferir o ceder derechos sobre el Software;
+- eliminar cualquier aviso de propiedad o etiquetas del Software; o 
+- ejecutar ningún acontecimientos mundiales o campeonato de zona sin el consentimiento por escrito de Fencing Time, LLC.
+
+Titularidad, los derechos de propiedad y los derechos de propiedad intelectual en y para el Software seguirán perteneciendo a Fencing Time, LLC. Este software está protegido por tratados internacionales de copyright.
+ 
+La licencia terminará automáticamente si el Licenciatario no cumple con las limitaciones descritas anteriormente. Tras la resolución, el Licenciatario deberá destruir todas las copias del Software.
+
+En el caso de una avería o un accidente en el software, los datos de registro de errores puede ser transmitida a Fencing Time, LLC con el fin de analizar y corregir errores en campo. Estos datos no contienen información privada. Fencing Time, LLC no recopila documentos u otros archivos desde el ordenador del Licenciatario, y esta colección se realiza exclusivamente en un esfuerzo por ofrecer un producto de calidad.
+ 
+RENUNCIA DE GARANTÍA
+---------------------------------------------
+ESTE SOFTWARE SE SUMINISTRA "TAL CUAL". FENCING TIME, LLC NIEGA TODAS LAS GARANTÍAS RELATIVAS A ESTE SOFTWARE, YA SEAN EXPRESAS O IMPLÍCITAS, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS IMPLÍCITAS DE COMERCIALIZACIÓN O IDONEIDAD PARA UN PROPÓSITO PARTICULAR. NI FENCING TIME, LLC, NI CUALQUIER PERSONA QUE SE HA INVOLUCRADO EN LA CREACIÓN, PRODUCCIÓN O ENTREGA DE ESTE SOFTWARE SE HACE RESPONSABLE POR CUALQUIER DAÑO INDIRECTO, CONSECUENTE O FORTUITO DERIVADO DEL USO O IMPOSIBILIDAD DE USAR SOFTWARE. LA PERSONA U ORGANIZACIÓN DE UTILIZAR EL SOFTWARE LLEVA TODO EL RIESGO EN CUANTO A LA CALIDAD Y RENDIMIENTO DEL SOFTWARE.
