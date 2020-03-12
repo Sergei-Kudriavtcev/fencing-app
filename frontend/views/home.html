@@ -2,80 +2,179 @@
 <html>
     <head>
         <title>Stab Hub</title>
-        
-          <span><i class="fas fa-bars"></i></span><span><h1></i> Stab Hub </h1></span>
-
-
-         <link rel="stylesheet" href="../Public/styles/style.css"> 
-         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="../Public/styles/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <script src="Javascript.js" ></script>
     </head>
     <body>
-        <!---------------------------NAVBAR----------------->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
+      <!----------------------NavBar--------------------->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#top"><img src="../Public/images/knife+icon-1320168630160236217.jpg" alt="knife_logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#notes_section">Notes</a>
+              <a class="nav-item nav-link" href="#percentage_section">Percentage</a>
+              <a class="nav-item nav-link" href="#">Bracket</a>
             </div>
-          </nav>
-        <!---------------------HOTBAR-------------------------->
-        <section id="hotbar">
+          </div>
+      </nav>
+
+
+        <!-------------------Notes------------------------->
+        <section id="notes_section">
+          <div class="container">
+            <h1>Notes</h1>
             <div class="row">
-                <div class="col-md-4 text-center">
-                    <h4>% ONE </h4>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person1">Persad</h3>
+                      <ul>
+                        <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                        <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                      </ul>
+                      <div class="info-button">
+                        <p><a href="notes.html">More Info</a></p>
+                      </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h4>% TWO </h4>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person2">Guyre</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <h4>% THREE </h4>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person3">Alex Liu</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
+                    
                 </div>
+              </div>
             </div>
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person4">Alex Fray</h3>
+                      <ul>
+                        <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                        <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                      </ul>
+                      <div class="info-button">
+                        <p><a href="notes.html">More Info</a></p>
+                      </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person5">Alex Senewald</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person6">Peyton</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person7">Ioke Kent</h3>
+                      <ul>
+                        <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                        <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                      </ul>
+                      <div class="info-button">
+                        <p><a href="notes.html">More Info</a></p>
+                      </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person8">Philip Kang</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-4 text-center">
+                <div class="profile">
+                  <img src="../Public/images/nobody1.jpg" class="user">
+                    <h3 id="person9">Penayatov</h3>
+                    <ul>
+                      <li> <i class="fa fa-chevron-right"></i> Straight Flesh</li>
+                      <li> <i class="fa fa-chevron-right"></i> Beat 4</li>
+                    </ul>
+                    <div class="info-button">
+                      <p><a href="notes.html">More Info</a></p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-<!-----------RANDOM IMAGE FOR CONTENT------------------->
-        <img src="../Public/images/glossyPineapple.jpg">
+      
 
-        
-
-        <!----------------------TABS----------------------
-        <section id="tabs">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <button class="btn"><h6>Tab 1</h6></button>
-                </div>
-                <div class="col-md-3 text-center">
-                    <button class="btn"><h6>Tab 2</h6></button>
-                </div>
-                <div class="col-md-3 text-center">
-                    <button class="btn"><h6>Tab 3</h6></button>
-                </div>
-                <div class="col-md-3 text-center">
-                    <button class="btn"><h6>Tab 4</h6></button>
-                </div>
+          <!------------------Percentage------------------>
+        <section class="percentage_section">
+          <div class="container">
+            <div class="percentage">
+              <p id="percentage_number">100%</p>
+              <h5 id="chance">Chance of beating <span id="beating_who"><em>Alex Senewald</em> </span></h5>
             </div>
-        </section> -->
+          </div>
+        </section>
 
-       
+        <!----------------------FOOTER END--------------------->
+        <script src="js/smooth-scroll.js"></script>
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
     </body>
 
 

@@ -1,41 +1,119 @@
-html {
-    margin-left: 10px;
-}
-/*Heading*/
-#heading {
-    text-align: center;
-    padding: 20px 20px;
-    border-bottom: 3px solid black;
-    background-color: lightgray;
-    font-weight: bold;
-    color: black;
-}
-/*Menue Icon*/
-.fas:hover {
+
+/*-----ICON----------*/
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
     cursor: pointer;
-
+    border-radius: 20%;
 }
-/*Hotbar*/
-#hotbar h4 {
-    color: black;
+.navbar-brand img:hover {
+    box-shadow: 0 2px 20px rgb(160,160,160);
+    transition: 0.3s;
+    cursor: pointer;
+}
+/*--------Percentage------------*/
+#percentage_number{
+    margin: 0;     
+    padding-top: 320px;
     text-align: center;
-    padding: 20px 0px;
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray ;
-     border-left: 2px solid gray; 
+    font-size: 150px;
+    border-bottom: 2px solid black;
 }
-/*Tabs*/
-#tabs .col-md-3 {
-    padding: 10px 0px;
-    border-top: 2px solid gray;
-    border-right: 2px solid gray;
+#chance{
+    margin: 0;
+    text-align: center;
+    padding-top:20px ;
+    padding-bottom: 400px;
 }
-.col-md-3:hover {
-    background-color: rgba(116, 116, 116, 0.212);
-    transition: 0.5s;
-}
-/*RANDOM IMAGE FOR CONTENT*/
-img {
-    height:600px ;
+.percentage_section {
+    background-color: rgb(56,242,42);
+  }
+
+/*-------Notes----------*/
+#notes_section h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 45px;
+    border-bottom: 2px solid black;
 }
 
+
+#notes_section
+{
+  padding-top: 50px;
+}
+#notes_section .row
+{
+    padding-top: 25px;
+    margin-top: 30px;
+}
+.col-md-4
+{
+  margin: 40px auto;
+}
+.profile
+{
+  padding: 70px 10px 10px;
+  background-color: #efefef;
+}
+.user
+{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.profile img
+{
+  top: -60px;
+  position: absolute;
+  left: calc(50% - 60px);
+  border: 10px solid #fff;
+}
+.profile h3
+{
+  font-size: 20px;
+  margin-top: 15px;
+  color: #007bff;
+}
+#notes_section h3 {
+    font-size: 25px;
+    font-weight: 250;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+.profile:hover
+{
+  box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+ul li
+{
+  border: none;
+  list-style-type: none;
+  text-align: left;
+}
+.info-button
+{
+  display: inline;
+  float: left;
+  padding: 15px 15px 30px;
+  text-align: center;
+  width: 100%;
+}
+.info-button p {
+  background-color:#292929;
+  color: white !important;
+  background-color: #292929;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;
+  padding: 15px 50px;
+  transition: 0.5s;
+}
+.info-button p:hover{
+  border-color: 1px solid #fff;
+  background-color: #727272;
+}
